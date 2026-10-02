@@ -1,0 +1,9 @@
+{
+  "glossary_path": "glossary/glossary.md",
+  "glossary_template": "glossary/glossary.template.md",
+  "people_path": "config/people.md",
+  "inbox_dir": "transcripts/inbox",
+  "notes_dir": "meetings",
+  "promote_at": 3,
+  "page_size": 200
+}

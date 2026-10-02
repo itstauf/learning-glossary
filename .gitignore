@@ -1,0 +1,16 @@
+# Raw transcripts stay on your machine by default.
+transcripts/inbox/*
+!transcripts/inbox/.gitkeep
+
+# Staged raw calls from the Granola adapter (config.json and processed.json are kept).
+meetings/.granola/*/
+
+# Cleaned notes: uncomment if you do not want them in git.
+# meetings/*.md
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/

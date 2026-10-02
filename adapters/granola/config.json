@@ -1,0 +1,9 @@
+{
+  "project": "REPLACE_WITH_PROJECT_NAME",
+  "granola_folders": ["REPLACE_WITH_GRANOLA_FOLDER_TITLE"],
+  "expected_account": "REPLACE_WITH_THE_GRANOLA_LOGIN_YOU_EXPECT",
+  "output_dir": "meetings",
+  "staging_dir": "meetings/.granola",
+  "first_run_start": "2024-01-01",
+  "timezone_note": "Timestamps are UTC (date -u). Change the date calls in the skills if you want a fixed offset."
+}
