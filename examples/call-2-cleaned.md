@@ -31,7 +31,8 @@ The team stopped using the spreadsheet on Friday. Every trailer now has a status
 ## Contradictions & things to verify
 | Raw heard | Applied (Suggest) | Why flagged |
 |---|---|---|
-| you no track / June o truck | JunoTrack | Was Watch. The speaker spelled it out in this call ("J U N O... Juno Track"), so applied for this call and moved to Suggest |
+| you no track | JunoTrack | New token, resolved from context: the speaker spelled it out ("J U N O... Juno Track"). Enters at Suggest, 1 sighting |
+| June o truck | _(kept as heard)_ | Watch row: never applied. This call shows it is the same app, so the row moves to Suggest afterwards |
 | Nilu upper | Nilu apa (Nilu Fernhall) | Suggest: honorific split off the name |
 | cloud (drive) | _(kept as "cloud")_ | Auto-apply failed context check: Claude / Claude Code makes no sense here; a file storage drive is meant |
 | Rumana | _(kept as heard)_ | Unverified name: not in `config/people.md` (second call in a row) |
@@ -77,7 +78,7 @@ The team stopped using the spreadsheet on Friday. Every trailer now has a status
 
 **Nilu:** I can do that today.
 
-**Tareq:** Sorry, one more. Is the JunoTrack login fixed? Two drivers still can't open it.
+**Tareq:** Sorry, one more. Is the June o truck login fixed? Two drivers still can't open it.
 
 **Mira:** I sent the names to Rumana. She said by Wednesday.
 

@@ -37,7 +37,7 @@ The same diagram in mermaid, for renderers that support it:
 ```mermaid
 stateDiagram-v2
     [*] --> Watch: new token, context unclear
-    [*] --> Suggest: new token, context clear
+    [*] --> Suggest: new token, context clear (incl. spelled out)
     Watch --> Suggest: a later call makes the meaning clear
     Suggest --> AutoApply: 3rd distinct transcript
     AutoApply --> Suggest: user demotes (by hand)
@@ -49,7 +49,7 @@ stateDiagram-v2
 
 | Rung | In the cleaned transcript | In the "Contradictions & things to verify" table |
 |---|---|---|
-| Watch | Raw text left exactly as heard | Nothing (the sighting is only counted in the glossary). Exception: if this very transcript makes the meaning plain, the row is treated as Suggest for this call (applied and flagged) and moves up to Suggest afterwards. |
+| Watch | Raw text left exactly as heard. Never applied, no exceptions. | Nothing (the sighting is only counted in the glossary) |
 | Suggest | Replaced | One row: raw heard, what was applied, why it is flagged |
 | Auto-apply | Replaced | Nothing, unless the context check failed. Then the raw text stays and a row says so. |
 

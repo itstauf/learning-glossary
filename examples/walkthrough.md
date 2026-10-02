@@ -9,8 +9,8 @@ Before call 1 the glossary is `glossary/glossary.template.md` with the Banglish 
 | | Call 1 · 8 Sep | Call 2 · 15 Sep | Call 3 · 22 Sep | Call 4 onwards |
 |---|---|---|---|---|
 | Heard as | "June o truck" (x3) | "you no track" (x3), "June o truck" (x1) | "juno truck" (x2), plus a real "June truck" (x2) | any of the above |
-| Tier while cleaning | not in glossary | **Watch** | **Suggest** | **Auto-apply** |
-| What the note shows | raw text, untouched | JunoTrack, **flagged** | JunoTrack, **flagged**; the real "June truck" untouched | JunoTrack, no flag; still context-checked |
+| Tier while cleaning | not in glossary | "June o truck": **Watch**; "you no track": new | **Suggest** | **Auto-apply** |
+| What the note shows | raw text, untouched | "you no track" → JunoTrack, **flagged**; "June o truck" untouched | JunoTrack, **flagged**; the real "June truck" untouched | JunoTrack, no flag; still context-checked |
 | Sightings after | 1 | 2 | 3 | 4, 5, ... |
 | Tier after | **Watch** | **Suggest** | **Auto-apply** | Auto-apply |
 
@@ -18,9 +18,10 @@ Before call 1 the glossary is `glossary/glossary.template.md` with the Banglish 
  call 1                      call 2                         call 3
  "June o truck"              "you no track"                 "juno truck"
  meaning unclear      ──▶    speaker spells it:      ──▶    3rd distinct transcript
- WATCH, 1 sighting           J-U-N-O, "our own app"         SUGGEST → AUTO-APPLY
- (nothing applied)           SUGGEST, 2 sightings           (flagged one last time)
-                             (applied + flagged)
+ WATCH, 1 sighting           new token → SUGGEST            SUGGEST → AUTO-APPLY
+ (nothing applied)           (applied + flagged);           (flagged one last time)
+                             Watch row merged in,
+                             2 sightings
 ```
 
 ## Call 1: Watch
@@ -39,13 +40,16 @@ Files: `call-2-raw.md` → `call-2-cleaned.md`, changes in `glossary-after-call-
 
 The ASR now hears "you no track". Mira asks Tareq to spell it. He does: "J U N O. Juno, like the company. Juno Track. Our own dispatch app."
 
-The row is Watch, and Watch rows are never applied from the glossary. But this transcript itself settles the meaning. So for this one call the skill treats the row as Suggest: it writes JunoTrack in the transcript and adds a row to the Contradictions table:
+This is a new spelling, and the speaker has just said what it is. Under the rule, a new token whose meaning is resolved from context enters at **Suggest** with 1 sighting, and is applied and flagged. So the skill writes JunoTrack in the transcript and adds a row to the Contradictions table:
 
 | Raw heard | Applied (Suggest) | Why flagged |
 |---|---|---|
-| you no track / June o truck | JunoTrack | Was Watch. The speaker spelled it out in this call ("J U N O... Juno Track"), so applied for this call and moved to Suggest |
+| you no track | JunoTrack | New token, resolved from context: the speaker spelled it out ("J U N O... Juno Track"). Enters at Suggest, 1 sighting |
+| June o truck | _(kept as heard)_ | Watch row: never applied. This call shows it is the same app, so the row moves to Suggest afterwards |
 
-After the note is written, the glossary row moves to **Suggest**, gains the spelling "you no track", and goes to 2 sightings. Four mishearings in this call, still +1.
+Later in the call Tareq says "June o truck login". That token matches the **Watch** row, and Watch rows are never applied, no exceptions. It stays as heard.
+
+After the note is written, the skill sees that both rows mean the same app. It moves the Watch row up to **Suggest**, merges the two, keeps the first-seen date from call 1, and counts 2 sightings: call 1 and call 2. Four mishearings in this call, still +1.
 
 Two other things worth seeing in call 2:
 

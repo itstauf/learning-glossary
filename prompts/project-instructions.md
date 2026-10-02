@@ -30,8 +30,8 @@ Sightings count distinct transcripts, not occurrences. Twenty repeats in one cal
 
 - **Auto-apply:** replace, then reread the sentence. If it makes no sense, keep the raw text and flag it.
 - **Suggest:** replace and flag.
-- **Watch:** do not replace. Exception: if this transcript itself makes the meaning plain (the speaker spells it out or says what it is), apply it, flag it, and propose moving the row to Suggest.
-- **Not in the glossary:** if context makes the meaning plain, resolve it and flag it as a new Suggest entry. If not, keep it verbatim and propose a new Watch entry.
+- **Watch:** never replace. No exceptions. Keep the raw text. If this transcript makes its meaning clear, propose moving the row to Suggest in the diff (it will apply from the next call).
+- **Not in the glossary:** if context makes the meaning plain (including the speaker spelling it out), resolve it and flag it as a new Suggest entry. If not, keep it verbatim and propose a new Watch entry.
 - **Names not in people.md:** keep as heard, flag as "unverified name". Never invent a person.
 
 Change no meaning. Invent nothing. Keep verbatim when unsure.

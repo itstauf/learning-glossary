@@ -4,7 +4,7 @@ What `clean-transcript` changed after cleaning `call-2-raw.md` (2026-09-15). Unc
 
 ## In one line
 
-`1 moved Watch → Suggest · 5 rows bumped · 0 promoted · 1 Auto-apply held back by the context check`
+`1 new (Suggest) merged with 1 Watch row, now Suggest · 5 rows bumped · 0 promoted · 1 Auto-apply held back by the context check`
 
 ## The rows
 
@@ -14,7 +14,7 @@ What `clean-transcript` changed after cleaning `call-2-raw.md` (2026-09-15). Unc
 -| muddy dot com / muddy.com / mandi.com / money.com | Monday.com | Auto-apply | pack | 2026-09-08 | 1 | ...
 +| muddy dot com / muddy.com / mandi.com / money.com | Monday.com | Auto-apply | pack | 2026-09-15 | 2 | ...
 -| June o truck | _(unresolved: probably a new dispatch tool, spelling unknown)_ | Watch | 2026-09-08 | 2026-09-08 | 1 | "Dispatch is putting it in June o truck now... the new one." Could also be a truck booked for June. Said 3 times, counted once. Do not apply. |
-+| June o truck / you no track | JunoTrack (Juno Freight's in-house dispatch app) | Suggest | 2026-09-08 | 2026-09-15 | 2 | Call 2: the speaker spelled it ("J U N O... Juno Track, our own dispatch app"). Moved up from Watch. Context check: "a truck booked for June" is not this row. |
++| June o truck / you no track | JunoTrack (Juno Freight's in-house dispatch app) | Suggest | 2026-09-08 | 2026-09-15 | 2 | Call 2: the speaker spelled it ("J U N O... Juno Track, our own dispatch app"). New Suggest entry "you no track" merged with the Watch row "June o truck". Context check: "a truck booked for June" is not this row. |
 
  ## B. Code-switched phrases
  ...
@@ -36,9 +36,10 @@ What `clean-transcript` changed after cleaning `call-2-raw.md` (2026-09-15). Unc
  ## Growth log (append-only, newest on top)
 
 +### 2026-09-15 (clean-transcript: Juno Freight dispatch and invoicing sync)
-+Moved "June o truck" from Watch to Suggest and added the spelling "you no track": Tareq spelled the
-+name in this call (JunoTrack, the in-house dispatch app). Misheard 4 times across two spellings,
-+counted once: 2 distinct transcripts. Bumped Monday.com, the apa rule, Nilu, the lone numerals
++New token "you no track" resolved from context (Tareq spelled it: JunoTrack, the in-house dispatch
++app), so it entered at Suggest and was applied and flagged. The Watch row "June o truck" was not
++applied (one mention kept as heard), but this call shows it is the same app: rows merged, now Suggest.
++Misheard 4 times across two spellings, counted once: 2 distinct transcripts. Bumped Monday.com, the apa rule, Nilu, the lone numerals
 +and accha. Held back Claude / Claude Code on "the cloud drive" (file storage, not the assistant);
 +no bump. Did not apply mane to "the money from two carriers" (literal money); no bump. Rumana
 +still not in config/people.md.
@@ -49,7 +50,7 @@ What `clean-transcript` changed after cleaning `call-2-raw.md` (2026-09-15). Unc
 
 ## What to look at
 
-- **The climb.** "June o truck" was Watch. This call made it plain, so it was applied in this note *with a flag* and moved to Suggest. It now has 2 sightings: call 1 and call 2. The four mishearings in call 2 count as one.
+- **The climb.** "you no track" is new, and the speaker spelled it out, so it enters at Suggest: applied *with a flag*. The Watch row "June o truck" is never applied, so its one mention in this call stays as heard. After the note, the skill sees both are the same app and merges them: Suggest, 2 sightings (call 1 and call 2). The four mishearings in call 2 count as one.
 - **A held-back Auto-apply.** "cloud" → Claude is Auto-apply, but "the cloud drive" is file storage. The context check kept "cloud" and put a row in the Contradictions table so you can see the decision. That is guard 2.
 - **A literal word.** "money" is a raw form of *mane* ("I mean"), but "the money from two carriers came in late" is money. Not applied, not counted.
 - **Rows that did not fire are not touched.** Most of the glossary is unchanged.

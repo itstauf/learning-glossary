@@ -143,7 +143,7 @@ Yes, and that is the default. Paste a transcript or drop a file in `transcripts/
 - **Log every change, regenerated rule digest:** the legibility doctrine from Tom, YC Root Access, video 01 ("the self-improving company"). The growth log is that idea applied to a glossary.
 - **Markdown knowledge base maintained by an LLM:** Andrej Karpathy's LLM wiki pattern.
 - **Thin harness, skills as markdown:** Answer This, YC Root Access, video 04.
-- Built by Taufiq uz Zaman from a glossary that has been cleaning my own calls since mid-2026, including one paid engagement, under NDA. Every example here is synthetic.
+- Built by Taufiq uz Zaman from a glossary that has been cleaning my own calls since June 2026, including one paid engagement, under NDA. Every example here is synthetic.
 
 ## Part of The Compounding Brain
 

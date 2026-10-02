@@ -97,8 +97,8 @@ For every suspicious token, **check the glossary before reconstructing from scra
 
 - **Auto-apply:** replace. Then reread the sentence. If it now makes no sense, undo it, keep the raw text, add a row to the Contradictions table with "auto-apply failed context check", and do not count a sighting.
 - **Suggest:** replace after the same context check, and add a row to the Contradictions table. If the context check fails, keep the raw text and do not count a sighting.
-- **Watch:** do not replace on the strength of the glossary. Keep the raw text and note the sighting for Phase 6. One exception: if **this transcript itself** makes the meaning plain (the speaker spells it out, or says what it is), treat the row as Suggest for this call only: apply it, flag it, and move the row to Suggest in Phase 6.
-- **Not in the glossary:** if context makes the meaning plain, resolve it, flag it in the Contradictions table, and record it as a candidate new entry (Suggest). If not, keep it verbatim and record it as a candidate Watch entry.
+- **Watch:** never replace. No exceptions. Keep the raw text and note the sighting for Phase 6.
+- **Not in the glossary:** if context makes the meaning plain (including the speaker spelling it out or saying what it is), resolve it, flag it in the Contradictions table, and record it as a new Suggest entry with 1 sighting. If the context is unclear, keep it verbatim and record it as a new Watch entry.
 
 Rules that hold everywhere:
 
@@ -153,7 +153,7 @@ Only after the note is written. Three kinds of change:
 
 1. **New entry.** A token resolved from context that is not in the glossary enters at **Suggest** (or **Watch** if the context was unclear) with `Sightings = 1`, `First seen` and `Last seen` = the call date.
 2. **Sighting bump.** A known token seen in this transcript gets `+1`, once per transcript however often it appeared, and `Last seen` = the call date. A new spelling of a known token is added to that row's Raw cell.
-3. **Tier change.** Watch → Suggest when this call made the meaning clear. Suggest → Auto-apply when `Sightings` reaches `promote_at`.
+3. **Tier change.** Watch → Suggest when this call made the meaning clear. The Watch row itself was not applied in this call; if this call's new Suggest entry turns out to be the same thing, merge the two rows, keep the earliest First seen, and count each distinct transcript once. Suggest → Auto-apply when `Sightings` reaches `promote_at`.
 
 Only Category A has Sightings, First seen and Last seen columns. For Categories B to E, keep the count at the start of the Notes cell as `seen N (last YYYY-MM-DD)` and bump it the same way. A row with no count yet (for example one merged from a pack) counts as `seen 0`.
 
